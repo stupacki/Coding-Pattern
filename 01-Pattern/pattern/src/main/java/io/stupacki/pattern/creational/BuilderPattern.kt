@@ -16,34 +16,28 @@ package io.stupacki.pattern.creational
 // Implementation
 data class House(var windows: Int = 0, var doors: Int = 0) {
 
-    interface HouseBuilder {
-        fun setWindows(count: Int): HouseBuilder
-        fun setDoors(count: Int): HouseBuilder
-        fun build(): House
-    }
-
-    class HouseBuilderImpl : HouseBuilder {
+    class HouseBuilder {
         private var house: House = House()
 
-        override fun setWindows(count: Int): HouseBuilder {
+        fun setWindows(count: Int): HouseBuilder {
             house.windows = count
             return this
         }
 
-        override fun setDoors(count: Int): HouseBuilder {
+        fun setDoors(count: Int): HouseBuilder {
             house.doors = count
             return this
         }
 
-        override fun build(): House {
+        fun build(): House {
             return house
         }
     }
 }
 
-//Usage
+// Usage
 private fun buildHouse(): House {
-    val houseBuilder = House.HouseBuilderImpl()
+    val houseBuilder = House.HouseBuilder()
     val house = houseBuilder
         .setWindows(4)
         .setDoors(2)
