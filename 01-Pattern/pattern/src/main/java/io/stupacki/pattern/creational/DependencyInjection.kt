@@ -61,7 +61,7 @@ fun mainModule(): DiModule = DiModule().apply {
 
 
 class MainViewModel {
-    val state = listOf("INITIAL_STATE")
+    val state: List<String> = listOf("INITIAL_STATE")
 }
 
 object TargetView {
