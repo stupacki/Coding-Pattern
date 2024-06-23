@@ -24,7 +24,7 @@ import io.stupacki.pattern.creational.Country.USA
  * The CurrencyFactory class is a good example of the Factory Method pattern. It creates a Currency object based on the Country object
  * passed to it. This way, the creation of Currency objects is decoupled from the main application and can be modified independently if the
  * need arises.
- * 
+ *
  */
 
 // Implementation
